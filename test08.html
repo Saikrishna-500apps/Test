@@ -3,6 +3,14 @@
         <title></title>
         <head>
             <body>
+                1st number:
+                <input type="number"value"" id="number"><br><br>
+                2nd number:
+                <input type="number"value"" id="numbers"><br><br>
+                <input type  ="submit" value="multiply"onclick="return myfun()">
+                <input type  ="submit" value="divide"onclick="return myfun2()"><br><br>
+                <b>The answer is :<b><br><br>
+                    <span id="result"></span>
                 <script>
                     function myfun(){
                         var a=document.getElementById('number').value;
@@ -15,14 +23,7 @@
                         document.getElementById('result').innerHTML=(a/b);
                     }
                     </script>
-                    1st number:
-                    <input type="number"value"" id="number"><br><br>
-                    2nd number:
-                    <input type="number"value"" id="numbers"><br><br>
-                    <input type  ="submit" value="multiply"onclick="return myfun()">
-                    <input type  ="submit" value="divide"onclick="return myfun2()"><br><br>
-                    <b>The answer is :<b><br><br>
-                        <span id="result"></span>
+                    
                     </body>
                     </html>
 
