@@ -1,16 +1,35 @@
 <html>
     <body>
-        <p id="name"></p>
-        <script>
-            const list =["orange", "red", "blue", "black", "white"]
-            document.getElementById("name").innerHTML= list.toString();
-            </script>
-            <form id="form"> 
-                <input type="search" id="query" name="q" placeholder="Search...">
-                <button>Search</button>
-              </form>
+        <input type="text" id="myInput" onkeyup="myFunction()">
+
+<ul id="ca">
+  <li><a value="orange">orange</a></li>
+  <li><a value="red">red</a></li>
+  <li><a value="blue">blue</a></li>
+  <li><a value="black">black</a></li>
+  <li><a value="white">white</a></li>
+
+ 
+</ul>
+<script>
+    function myFunction() {
+       input = document.getElementById('myInput');
+      filter = input.value.toUpperCase();
+      ul = document.getElementById("ca");
+      li = ul.getElementsByTagName('li');
+       for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+          li[i].style.display = "";
+        } else {
+          li[i].style.display = "none";
+        }
+      }
+    }
+    </script>
               
-              
+            
           
             </body>
 </html>
